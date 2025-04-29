@@ -1,0 +1,12 @@
+model Sprint {
+  id          Int      @id @unique
+  name        String
+  startedAt   DateTime
+  completedAt DateTime
+  createdAt   DateTime
+  endedAt     DateTime
+  boardId     Int
+  goal        String
+  state       String
+  issues      Issue[]
+}

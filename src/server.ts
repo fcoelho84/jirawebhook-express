@@ -3,11 +3,11 @@ import express, { type Express } from "express";
 import helmet from "helmet";
 import { pino } from "pino";
 
-import jiraRoutes from "@/api/jira/routes";
 import errorHandler from "@/common/middleware/errorHandler";
 import rateLimiter from "@/common/middleware/rateLimiter";
 import requestLogger from "@/common/middleware/requestLogger";
 import { env } from "@/common/utils/envConfig";
+import webhookRoutes from "@/modules/webhook/routes";
 
 const logger = pino({ name: "server start" });
 const app: Express = express();
@@ -26,7 +26,7 @@ app.use(rateLimiter);
 app.use(requestLogger);
 
 // Routes
-app.use("/jira", jiraRoutes);
+app.use("/jira", webhookRoutes);
 
 // Error handlers
 app.use(errorHandler());

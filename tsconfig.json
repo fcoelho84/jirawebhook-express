@@ -6,14 +6,15 @@
 		"paths": {
 			"@/*": ["*"]
 		},
-		"moduleResolution": "bundler",
+		"moduleResolution": "node",
 		"outDir": "dist",
 		"importsNotUsedAsValues": "remove",
 		"strict": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
+		"forceConsistentCasingInFileNames": true
 	},
 	"include": ["src/**/*"],
+	"typeRoots": ["node_modules/@types"],
 	"exclude": ["node_modules"]
 }

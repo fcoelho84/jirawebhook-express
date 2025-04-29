@@ -1,0 +1,10 @@
+model Issue {
+  id          Int      @id @unique
+  createdAt   DateTime
+  updatedAt   DateTime
+  description String
+  summary     String
+  point       Float
+  SprintId    Int
+  sprint      Sprint   @relation(fields: [SprintId], references: [id])
+}

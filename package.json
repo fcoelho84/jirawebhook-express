@@ -15,6 +15,7 @@
 		"format": "biome format --write"
 	},
 	"dependencies": {
+		"@prisma/client": "^6.7.0",
 		"cors": "2.8.5",
 		"dotenv": "16.5.0",
 		"express": "5.1.0",
@@ -30,6 +31,7 @@
 		"@types/cors": "2.8.17",
 		"@types/express": "5.0.1",
 		"pino-pretty": "13.0.0",
+		"prisma": "^6.7.0",
 		"tsup": "8.4.0",
 		"tsx": "4.19.3",
 		"typescript": "5.8.3",
@@ -45,6 +47,5 @@
 		"dts": true,
 		"splitting": false,
 		"skipNodeModulesBundle": true
-	},
-	"packageManager": "pnpm@10.9.0"
+	}
 }

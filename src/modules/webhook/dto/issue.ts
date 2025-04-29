@@ -41,9 +41,9 @@ export const IssueSchema = z.object({
 	}),
 });
 
-export const IssueCreatedWebhookEventSchema = BaseWebhookEventSchema.extend({
+export const IssueWebhookEventSchema = BaseWebhookEventSchema.extend({
 	changelog: ChangelogSchema,
 	issue: IssueSchema,
 });
 
-export type IssueCreatedWebhookEvent = z.infer<typeof IssueCreatedWebhookEventSchema>;
+export type IssueWebhookEvent = z.infer<typeof IssueWebhookEventSchema>;
